@@ -1,3 +1,73 @@
+# Hikvision Ultimate
+
+Canvas IO Workflows — maintained integration/fork of an independent Node-RED node package.
+
+## Canvas IO
+
+| | |
+|--|--|
+| Domain | Security / Hikvision |
+| Development status | Integrated in local harness (cio-wfs-dev) |
+| Palette category (operational) | `Canvas IO` |
+| Config nodes | remain `category: "config"` |
+| Local repository | `cio-wfs-nodes/cio-wfs-node-security-hikvision` |
+| npm package name | `node-red-contrib-hikvision-ultimate` (unchanged) |
+
+`cio-wfs-nodes` is an organizational parent only — not a monorepo. One node package = one Git repository.
+
+This repository is a **Canvas IO-maintained integration/fork**. Protocol and node runtime logic originate from upstream; Canvas IO changes are limited to integration, presentation, and local development packaging.
+
+## Nodes
+
+### Operational (palette: Canvas IO)
+
+- Camera Event, RAW Event, ANPR, PTZ, Picture, XML, Doorbell, AX Pro, Access Control Terminal, Speaker, Intelligent Event, Text
+
+### Configuration
+
+- `Hikvision-config`, `AXPro-config`, `Doorbell-config`, `ANPR-config`, `Speaker-config`, `AccessControl-config`
+
+## Development
+
+```powershell
+cd C:\GitHub\canvasio\cio-wfs-nodes\cio-wfs-node-security-hikvision
+npm install
+```
+
+Local harness:
+
+```powershell
+cd C:\GitHub\canvasio\cio-wfs-dev
+npm install
+cd C:\GitHub\canvasio\cio-wfs-core
+node packages/node_modules/node-red/red.js --userDir C:\GitHub\canvasio\cio-wfs-dev
+```
+
+Open http://localhost:1880
+
+## Testing
+
+Tool scripts under `tools/`; no formal package test suite.
+
+## Upstream
+
+| | |
+|--|--|
+| Original package | `node-red-contrib-hikvision-ultimate` |
+| Upstream project | https://github.com/Supergiovane/node-red-contrib-hikvision-ultimate |
+
+Canvas IO does not claim authorship of the original upstream implementation.
+
+## License
+
+MIT — see ``LICENSE``.
+
+---
+
+## Upstream documentation
+
+The following sections retain useful upstream technical documentation (adapted only where needed).
+
 <p align="center">
   <img src="img/logo-supervibe.png" alt="Hikvision Ultimate - Max Supervibe" width="380">
 </p>
@@ -22,7 +92,7 @@ Be sure to have installed **Node.js v12.3.0** or newer (issue a node -v command 
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://www.paypal.me/techtoday)
 
 <p align="center">
-  <img src="img/readmemain.png" alt="Hikvision Ultimate for Node-RED — Max Supervibe" width="70%">
+  <img src="img/readmemain.png" alt="Hikvision Ultimate for Node-RED â€” Max Supervibe" width="70%">
 </p>
 
 ## WARNING
@@ -721,7 +791,7 @@ Please note that not all cameras nor NVR/DVR (especially with old firmware) supp
     once: false,
     onceDelay: 0.1,
     topic: "",
-    payload: "22°c",
+    payload: "22Â°c",
     payloadType: "str",
     x: 170,
     y: 180,
