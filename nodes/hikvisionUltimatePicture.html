@@ -37,14 +37,14 @@
 		icon: "camera-icon.svg",
 		label:
 			function () {
-				var label = "Picture"
+				var label = "Hikvision Picture"
 				if (this.name !== undefined && this.name.length > 0) {
 					label = this.name;
 				}
 				return label;
 			},
 		paletteLabel: function () {
-			return "Picture";
+			return "Hikvision Picture";
 		},
 		oneditprepare: function () {
 			var oNodeServer = RED.nodes.node($("#node-input-server").val()); // Store the config-node

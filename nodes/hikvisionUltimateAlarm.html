@@ -34,14 +34,14 @@
 		icon: "node-alarm.svg",
 		label:
 			function () {
-				var label = "Camera Event"
+				var label = "Hikvision Event"
 				if (this.name !== undefined && this.name.length > 0) {
 					label = this.name;
 				}
 				return label;// + " " + this.reactto;
 			},
 		paletteLabel: function () {
-			return "Camera Event";
+			return "Hikvision Event";
 		},
 		oneditprepare: function () {
 			var node = this;
